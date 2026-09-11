@@ -9,27 +9,27 @@ while True:
     login_usuario = input("Insira o usuário ")
 
     while login_usuario != usuario:
-        print("ta errado garai")
+        print("Este usuário não existe")
         login_usuario = input("Insira o usuário ")
 
-    print("salve " + usuario)
+    print("Olá " + usuario)
 
     login_senha = input("Insira a senha ")
 
     while (login_senha != senha) and (tentativas < 3):
         tentativas += 1
-        print("ta errado doidão")
+        print("Senha incorreta")
         login_senha = input("Insira a senha ")
 
     if tentativas < 3:
-        print("ta em casa patrão")
+        print("Acesso Liberado")
         break
     else:
-        print("ta bloqueado patrão")
+        print("Você está bloqueado!")
         bloqueio = True
 
     if bloqueio:
-        print("aguarde alguns instantes meu nobre")
+        print("Aguarde alguns instantes e tente novamente")
 
         for i in range(5, 0, -1):
             print(".")
